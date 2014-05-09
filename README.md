@@ -1,6 +1,6 @@
-# JAX-RS Template Application
+# Furniture application 
+Test application to learn angularJS, JPA with hibernate and incorporate spring Roo.
 
-This is a template for a lightweight RESTful API using JAX-RS. The sample code is a call for getting the current time.
     
 ## Running the application locally
 
