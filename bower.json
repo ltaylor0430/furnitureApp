@@ -1,0 +1,27 @@
+{
+  "name": "furniture",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ltaylor0430/furnitureApp",
+  "authors": [
+    "Lawrence Taylor <ltaylor0430@gmail.com>"
+  ],
+  "description": "My first angular application",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-mocks": "~1.2.x",
+    "bootstrap": "~3.1.1",
+    "angular-route": "~1.2.x",
+    "angular-resource": "~1.2.x",
+    "jquery": "1.10.2",
+    "angular-animate": "~1.2.x"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
