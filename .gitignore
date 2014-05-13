@@ -6,3 +6,5 @@ build
 .settings
 .env
 database.properties
+node_modules
+package.json
