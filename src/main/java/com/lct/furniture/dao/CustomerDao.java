@@ -12,18 +12,22 @@ import com.lct.furniture.persistence.model.Customers;
  
 @Repository
 @Transactional
-@SuppressWarnings("unchecked")
+@SuppressWarnings({"unchecked","rawtypes"})
 public class CustomerDao implements ICustomerDao {
 	    @Autowired
 	    private SessionFactory sessionFactory;
 		 
 	
 	    
-	    public List  loadCustomers() {
+	    public List<Customers>  loadCustomers(int start,int maxSize) {
 	        return   this.sessionFactory.getCurrentSession()
-	                .createQuery("from Customers").setMaxResults(50)
+	                .createQuery("from Customers")
+	                .setFirstResult(start)
+	                .setMaxResults(maxSize)
 	                .list();
 	    }
+	    
+	   
 	    /*public Collection loadProductsByCategory(String category) {
 	        return this.sessionFactory.getCurrentSession()
 	                .createQuery("from test.Product product where product.category=?")

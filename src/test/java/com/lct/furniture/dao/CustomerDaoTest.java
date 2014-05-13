@@ -29,10 +29,11 @@ public class CustomerDaoTest {
 	@Autowired
 	public ICustomerDao customers;
 	 
+	 
 	@Test
-    public void testLoadCustomers() throws Exception {
-		List<Customers> custList=  customers.loadCustomers();
-	 	assertThat(custList,hasSize(50));
+    public void testLoadSomeCustomers() throws Exception {
+		List<Customers> custList=  customers.loadCustomers(0,20);
+	 	assertThat(custList,hasSize(20));
        
       
     }
