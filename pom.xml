@@ -58,20 +58,7 @@
         </dependency>
         
             
-        <!--  Hibernate -->
-        <dependency>
-		   <groupId>org.hibernate</groupId>
-		   <artifactId>hibernate-core</artifactId>
-		   <version>4.3.5.Final</version>
-		</dependency>
-		<!-- to enable Hibernate to use its proxy model, we need javassist as well -->
-
-		<dependency>
-		   <groupId>org.javassist</groupId>
-		   <artifactId>javassist</artifactId>
-		   <version>3.18.0-GA</version>
-		</dependency>
-		
+        
 		  <!-- Hibernate uses slf4j for logging, for our purposes here use the simple backend -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -167,9 +154,14 @@
                 <version>8.1.4.v20120524</version>
                 <configuration>
                     <webAppConfig>
-                        <contextPath></contextPath>
+                        <contextPath>/</contextPath>
                     </webAppConfig>
-                     
+                <systemProperties>
+                	<systemProperty>
+                		<name>spring.profiles.active</name>
+                		<value>dev</value>
+                	</systemProperty>
+                </systemProperties>
                 </configuration>
             </plugin>
         </plugins>
